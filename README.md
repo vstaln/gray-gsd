@@ -1,10 +1,17 @@
-# gray-gsd
+<p align="center">
+  <img src="assets/gray-logo.svg" alt="gray" width="96">
+</p>
+<h1 align="center">gray-gsd</h1>
+<p align="center">The Get Shit Done spec → plan → tasks loop as gray sidecar commands.</p>
+<p align="center">
+  <a href="https://github.com/vstaln/gray-gsd/blob/main/LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <img alt="gray plugin" src="https://img.shields.io/badge/gray-plugin-7aa2f7.svg">
+  <img alt="rust" src="https://img.shields.io/badge/built%20with-rust-orange.svg">
+</p>
 
-The **Get Shit Done** spec → plan → tasks loop as gray sidecar commands.
-Upstream spreads the workflow across dozens of phase commands; this port
-condenses it to `/gsd` plus a `gsd_task` checklist tool, with all state as
-plain markdown under `.gsd/` in the project repo (`spec.md`, `plan.md`,
-`tasks.md` checkboxes).
+The full workflow is condensed to `/gsd` plus a `gsd_task` checklist tool,
+with all state as plain markdown under `.gsd/` in the project repo
+(`spec.md`, `plan.md`, `tasks.md` checkboxes).
 
 ## Commands
 
@@ -27,17 +34,13 @@ Indices are 1-based in file order.
 `plugin/manifest`, `tool/call`, `command/run`, `plugin/shutdown`.
 No hooks, no capabilities — protocol 1.1.
 
-## Upstream
-
-[gsd-build/get-shit-done](https://github.com/gsd-build/get-shit-done) —
-MIT. Phrasing adapted from `commands/gsd/spec-phase.md`,
-`plan-phase.md`, `execute-phase.md`, `verify-work.md` (falsifiable
-requirements, verification loop, never mark unverified work done);
-state layout simplified from `.planning/` to `.gsd/`.
-
 ## Install
 
 ```sh
 cargo install --path .        # or: cargo build --release
 gray plugin install ~/.cargo/bin/gray-gsd
 ```
+
+---
+Part of the [gray](https://github.com/vstaln/gray) plugin ecosystem —
+the open-source AI agent harness. <https://gray.alignment.id>

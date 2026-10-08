@@ -1,10 +1,8 @@
 //! gray-gsd — the Get Shit Done spec → plan → tasks loop as gray commands.
 //!
-//! Behavioral port of gsd-build/get-shit-done (MIT): upstream spreads the
-//! loop across dozens of commands (spec-phase → discuss → plan-phase →
-//! execute-phase → verify); this port condenses it to one `/gsd` command and
-//! one `gsd_task` tool, with state as plain markdown under `.gsd/` in the
-//! project (spec.md, plan.md, tasks.md checkboxes) instead of `.planning/`.
+//! The loop is condensed to one `/gsd` command and one `gsd_task` tool,
+//! with state as plain markdown under `.gsd/` in the project (spec.md,
+//! plan.md, tasks.md checkboxes).
 //!
 //! `/gsd <goal>` returns `{prompt}` so the agent runs the loop itself;
 //! `/gsd status`, `/gsd reset` return `{text}`.
