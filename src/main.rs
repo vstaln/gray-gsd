@@ -35,6 +35,7 @@ fn manifest() -> Value {
             }
         }],
         "commands": ["/gsd"],
+        "command_descriptions": {"/gsd": "run the spec, plan, tasks loop on a goal"},
     })
 }
 
