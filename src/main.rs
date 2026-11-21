@@ -200,13 +200,14 @@ fn execute_prompt(dir: &Path) -> Result<String, String> {
     if !tasks.exists() {
         return Err("no .gsd/tasks.md — run /gsd <goal> first".into());
     }
-    Ok(format!(
+    Ok(
         "Resume the GSD loop in this repository. Read `.gsd/spec.md`, `.gsd/plan.md`, and \
         `.gsd/tasks.md` first. Then execute each unchecked `- [ ]` task in order: implement, \
         run its verification from plan.md, mark it `- [x]` via the `gsd_task` tool only after \
         it passes. Never mark unverified work done. When every box is checked, run the \
         acceptance criteria from spec.md and report."
-    ))
+            .to_string(),
+    )
 }
 
 fn status_text(dir: &Path) -> String {
